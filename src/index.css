@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme {
+  --font-grotesk: 'Space Grotesk', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  --color-neo-yellow: #FFE600;
+  --color-neo-pink: #FF6B9D;
+  --color-neo-blue: #4ECDC4;
+  --color-neo-purple: #A855F7;
+  --color-neo-orange: #FF8A00;
+  --color-neo-green: #84CC16;
+  --color-neo-red: #EF4444;
+  --color-neo-cyan: #06B6D4;
+  --color-neo-lime: #D9F99D;
+  --color-neo-bg: #FFF8E7;
+  --color-neo-dark: #1A1A2E;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1A1A2E #FFF8E7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #FFF8E7;
+  overflow-x: hidden;
+}
+
+.neo-border {
+  border: 2px solid #1A1A2E;
+}
+
+.neo-shadow {
+  box-shadow: 4px 4px 0px #1A1A2E;
+}
+
+.neo-shadow-sm {
+  box-shadow: 3px 3px 0px #1A1A2E;
+}
+
+.neo-shadow-lg {
+  box-shadow: 5px 5px 0px #1A1A2E;
+}
+
+.neo-btn {
+  border: 2px solid #1A1A2E;
+  box-shadow: 3px 3px 0px #1A1A2E;
+  transition: all 0.1s ease;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.neo-btn:hover {
+  box-shadow: 1px 1px 0px #1A1A2E;
+  transform: translate(2px, 2px);
+}
+
+.neo-btn:active {
+  box-shadow: 0px 0px 0px #1A1A2E;
+  transform: translate(3px, 3px);
+}
+
+@media (min-width: 640px) {
+  .neo-border {
+    border-width: 3px;
+  }
+
+  .neo-shadow {
+    box-shadow: 6px 6px 0px #1A1A2E;
+  }
+
+  .neo-shadow-sm {
+    box-shadow: 4px 4px 0px #1A1A2E;
+  }
+
+  .neo-shadow-lg {
+    box-shadow: 8px 8px 0px #1A1A2E;
+  }
+
+  .neo-btn {
+    border-width: 3px;
+    box-shadow: 4px 4px 0px #1A1A2E;
+  }
+
+  .neo-btn:hover {
+    box-shadow: 2px 2px 0px #1A1A2E;
+  }
+
+  .neo-btn:active {
+    box-shadow: 0px 0px 0px #1A1A2E;
+    transform: translate(4px, 4px);
+  }
+}
+
+.marquee {
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.rotate-hover:hover {
+  transform: rotate(-2deg) scale(1.02);
+}
+
+::selection {
+  background-color: #FFE600;
+  color: #1A1A2E;
+}
